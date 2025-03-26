@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TimeLine</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <div class="timeline-container"></div>
+        <div class="events-container"></div>
+    </div>
+	
+	<!-- 导入和导出按钮 -->
+    <div class="actions-container">
+        <button id="export-btn" class="square-btn">Export</button>
+        <input type="file" id="import-btn" class="file-input" />
+        <label for="import-btn" class="square-btn">Import</label>
+    </div>
+	
+
+    <!-- 事件编辑弹窗 -->
+	<div id="event-modal" class="modal">
+		<div class="modal-content">
+			<h2 id="modal-title">添加事件</h2>
+			<label>开始日期：</label>
+			<input type="date" id="event-start-date">
+			<label>结束日期：</label>
+			<input type="date" id="event-end-date">
+			<label>内容：</label>
+			<input type="text" id="event-text" placeholder="请输入事件内容">
+			<div class="modal-buttons">
+				<button id="save-event" class="btn primary">保存</button>
+				<button id="close-modal" class="btn">取消</button>
+			</div>
+		</div>
+	</div>
+    
+    <!-- 添加事件按钮 -->
+    <button id="add-event" class="floating-btn">＋</button>
+	
+    <script src="script.js"></script>
+</body>
+</html>
